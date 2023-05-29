@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      p {
+        text-align: center;
+      }
+    </style>
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/node-fetch@3.3.1/src/index.min.js"
@@ -19,7 +21,7 @@
       const rickMortyResources = async () => {
         const response = await fetch("https://rickandmortyapi.com/api");
         const data = await response.json();
-        console.log(`All available API's resources: `, data);
+        console.log(`Recursos disponibles de la API Rick ad Morty: `, data);
       };
       rickMortyResources();
 
@@ -28,7 +30,7 @@
           "https://rickandmortyapi.com/api/character"
         );
         const data = await response.json();
-        console.log(`Info and Pagination: `, data);
+        console.log(`Info y Paginación: `, data);
       };
       rickMortyCharacters();
 
@@ -37,7 +39,7 @@
           "https://rickandmortyapi.com/api/character/?page=5"
         );
         const data = await response.json();
-        console.log(`Info and Pagination page no.5: `, data);
+        console.log(`Info y Paginación pagina no.5: `, data);
       };
       rickMortyCharactersPage();
 
@@ -46,12 +48,12 @@
           `https://rickandmortyapi.com/api/character`
         );
         const data = await response.json();
-        console.log(`Get character 5: `, data);
+        console.log(`Obtener character: `, data);
       };
       rickMortyCharacter();
 
       const rickMortyCharacterByName = async (charName) => {
-        let url = `https://rickandmortyapi.com/api/character/?name=${charName}`
+        let url = `https://rickandmortyapi.com/api/character/?name=${charName}`;
         console.log(`url: ${url}`);
         const response = await fetch(
           `https://rickandmortyapi.com/api/character/?name=${charName}`
@@ -65,7 +67,7 @@
           "https://rickandmortyapi.com/api/character/6,29,301"
         );
         const data = await response.json();
-        console.log(`Get multiple characters: `, data);
+        console.log(`Obtener varios characters: `, data);
       };
       rickMortyMultipleCharacters();
 
@@ -74,14 +76,14 @@
           "https://rickandmortyapi.com/api/character/?name=abradolf&status=alive"
         );
         const data = await response.json();
-        console.log(`Get filtered characters: `, data);
+        console.log(`Filtrar characters: `, data);
       };
       rickMortyFilteredCharacters();
 
       const rickMortyEpisodes = async () => {
         const response = await fetch("https://rickandmortyapi.com/api/episode");
         const data = await response.json();
-        console.log(`The list of episodes: `, data);
+        console.log(`La lista de episodios: `, data);
       };
       rickMortyEpisodes();
 
@@ -97,44 +99,62 @@
         });
 
         const dataResp = await response.json();
-        console.log(`User created: ` ,dataResp);
+        console.log(`User created: `, dataResp);
       };
 
       addUser();
 
       const showRickMortyChar = async (e) => {
-        let characterName = document.getElementById('nickName').value;
+        let characterName = document.getElementById("nickName").value;
         const rickMortyChar = await rickMortyCharacterByName(characterName);
         console.log(`rickMortyChar: `, rickMortyChar.results[0].name);
         console.log(`rickMortyChar: `, rickMortyChar.results[0].image);
-        document.getElementById('rmImg').src = `${rickMortyChar.results[0].image}`;
-        document.getElementById('rmName').value = `${rickMortyChar.results[0].name}`;
-      }
+        document.getElementById(
+          "rmImg"
+        ).src = `${rickMortyChar.results[0].image}`;
+        document.getElementById(
+          "rmName"
+        ).value = `${rickMortyChar.results[0].name}`;
+      };
     </script>
-    <title>Rick & Morty Character Search</title>
+    <title>Busqueda de Character Rick & Morty</title>
   </head>
   <body>
     <section class="registry-section">
       <div class="form-container">
         <div class="form-header">
-          <h2>Rick Morty Character</h2>
-          <br/>
+          <h2>Character Rick Morty</h2>
+          <br />
         </div>
-          <div class="form-box">
-            <label for="nickName">Name</label>
-            <input
-              type="text"
-              name="nickName"
-              id="nickName"
-              placeholder="Enter a character"
-            />
+        <div class="form-box">
+          <label for="nickName">Nombre</label>
+          <input
+            type="text"
+            name="nickName"
+            id="nickName"
+            placeholder="Ingrese un nombre"
+          />
+        </div>
+        <br />
+        <br />
+        <br />
+        <button onclick="showRickMortyChar()">
+          P L A Y
+          <div id="clip">
+            <div id="leftTop" class="corner"></div>
+            <div id="rightBottom" class="corner"></div>
+            <div id="rightTop" class="corner"></div>
+            <div id="leftBottom" class="corner"></div>
           </div>
-          <br/>
-          <button id="submit-btn" onclick="showRickMortyChar()">Enviar</button>
-          <br/>
-          <img src="" id="rmImg">
-          <br/>
-          <input id="rmName" type="text" value="" disabled>
+          <span id="rightArrow" class="arrow"></span>
+          <span id="leftArrow" class="arrow"></span>
+        </button>
+        <br />
+        <br />
+        <br />
+        <img src="" id="rmImg" />
+        <br />
+        <input id="rmName" type="text" value="" disabled />
       </div>
     </section>
   </body>
