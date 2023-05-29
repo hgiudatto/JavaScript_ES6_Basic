@@ -37,18 +37,16 @@ const estudiantes = [
   },
 ];
 
-// Recordemos los callbacks...
+// Recordemos los arrow functions...
 // filter()
 
-const estudiantesCasados = estudiantes.filter((e) => {
-  return e.casado; // truthy
-});
+const estudiantesCasados = estudiantes.filter(e => e.casado);
 console.log(`estudiantes casados: `, estudiantesCasados);
 
 // ! map()
 
 const nombresCompletos = estudiantes.map((e) => {
-  return `${e.nombre} ${e.apellido}`;
+  return `${e.nombre}, ${e.apellido}`;
 });
 console.log(`nombres completos: ${nombresCompletos}`);
 
@@ -60,13 +58,11 @@ const pagaTotal = estudiantes.reduce((ac, e) => {
 console.log(`el curso gana en total: `, pagaTotal);
 
 // some()
-const gananMenosDe300 = estudiantes.some((e) => {
-  return e.gana < 300;
-});
+const gananMenosDe300 = estudiantes.some(e => e.gana < 300);
 console.log(
   gananMenosDe300
     ? `en el curso hay estudiantes que ganan menos de 300`
-    : `todos los estudiantes ganan bastante.`
+    : `todos los estudiantes ganan bastante.`|
 );
 
 // find()

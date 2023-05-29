@@ -3,7 +3,7 @@
 // Devuelve Promise
 
 // Github repos => Promise...thens
-const url = "https://api.github.com/users/hgiudatto/repos?per_page=100";
+const url = `https://api.github.com/users/<usuario>/repos?per_page=100`;
 // console.log(fetch(url))
 
 // fetch(url).then((resp) => console.log(resp)).catch(err => console.log(err))
@@ -14,7 +14,7 @@ const url = "https://api.github.com/users/hgiudatto/repos?per_page=100";
   .catch((err) => console.log(err)); */
 
 // Github repos => async / await
-/* const fetchRepo = async () => {
+const fetchRepo = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -28,4 +28,4 @@ const url = "https://api.github.com/users/hgiudatto/repos?per_page=100";
     console.log(`Ocurrió un error: `, error);
   }
 };
-fetchRepo(); */
+fetchRepo();

@@ -1,16 +1,13 @@
 
 // Funciones de Flecha - Arrow Functions
-function soup2UpperCase(text) {
+/* function soup2UpperCase(text) {
   const nameUpper = text.toUpperCase();
   console.log(nameUpper);
-}
+} */
 
-/* const soup2UpperCase = (text) => {
-  const nameUpper = text.toUpperCase();
-  console.log(nameUpper);
-}; */
+// const soup2UpperCase = text => console.log(nameUpper)
 
-soup2UpperCase("sopa");
+// soup2UpperCase("sopa");
 
 // Immediately Invoked Function Expression (IIFE)
 // Sentencia en la cual la funcion es creada como una expresion
@@ -23,6 +20,6 @@ const resultado = calcula("23", 20 + 45, 35 + 10);
 console.log(resultado); */
 
 // IIFE
-/* ((a, b, c) => {
+((a, b, c) => {
   console.log(b - c + a);
-})("23", 20 + 45, 35 + 10); */
+})("23", 20 + 45, 35 + 10);

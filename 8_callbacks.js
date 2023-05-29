@@ -1,6 +1,6 @@
 // Basic
 console.log("Yo tomo");
-console.log("helado");
+setTimeout(() => console.log("helado"), 3000)
 console.log("con una");
 console.log("cuchara");
 // Callback Functions (Retrollamada)

@@ -4,7 +4,7 @@
 // await espera hasta que la promesa sea resuelta
 // error handling - bloque try/catch
 
-const ejemplo = async () => {
+/* const ejemplo = async () => {
   return "Hola async/await";
 };
 //console.log(ejemplo);
@@ -13,7 +13,7 @@ const unaFuncion = async () => {
   const resultado = await ejemplo();
   console.log(`resultado: ${resultado}`);
 };
-unaFuncion();
+unaFuncion(); */
 
 const usuarios = [
   { id: 1, nombre: "pedro" },
@@ -59,7 +59,7 @@ getUsuario("susana")
   .catch((err) => console.log(`ocurrió un error: ${err}`));
 
 // ! es en este escenario donde aparece async/await
-/* const getData = async () => {
+const getData = async () => {
   const usuario = await getUsuario("pedro"); // espera que se cumpla la promesa
   console.log(`usuario hallado al termino de la busqueda: `, usuario);
   if (usuario) {
@@ -67,6 +67,6 @@ getUsuario("susana")
     console.log(`articulos: `, articulos);
   }
 };
-getData(); */
+getData();
 
 // try/catch => evitamos validaciones
