@@ -87,7 +87,7 @@ console.log(
 
 //at() => Aparece en la actualizacion ES2022 junto con Await nivel superior (como veremos),
 // Object.hasOwn(), Propiedades/métodos privados y error.cause
-const comidaChatarraAmada = [
+const fastFoodPosta = [
   "🥝",
   "🍔",
   "🥦",
@@ -106,10 +106,10 @@ const comidaChatarraAmada = [
   "🍕",
   "🥕",
 ];
-console.log(comidaChatarraAmada.at(1));
-console.log(comidaChatarraAmada.at(3));
-console.log(comidaChatarraAmada.at(4));
-console.log(comidaChatarraAmada.at(-2));
-console.log(comidaChatarraAmada.at(-10));
-console.log(comidaChatarraAmada.at(-11));
-console.log(comidaChatarraAmada.at(18));
+console.log(fastFoodPosta.at(1));
+console.log(fastFoodPosta.at(3));
+console.log(fastFoodPosta.at(4));
+console.log(fastFoodPosta.at(-2));
+console.log(fastFoodPosta.at(-10));
+console.log(fastFoodPosta.at(-11));
+console.log(fastFoodPosta.at(18));

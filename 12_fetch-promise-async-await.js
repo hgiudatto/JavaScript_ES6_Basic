@@ -14,7 +14,7 @@ const url = "https://api.github.com/users/hgiudatto/repos?per_page=100";
   .catch((err) => console.log(err)); */
 
 // Github repos => async / await
-const fetchRepo = async () => {
+/* const fetchRepo = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
@@ -28,4 +28,4 @@ const fetchRepo = async () => {
     console.log(`Ocurrió un error: `, error);
   }
 };
-fetchRepo();
+fetchRepo(); */

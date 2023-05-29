@@ -18,45 +18,51 @@ console.log(`semana: ${semana.join(" - ")}`);
 console.log(`inicioDeSemana: ${inicioDeSemana.join(" - ")}`);
 console.log(`mitadDeSemana: ${mitadDeSemana.join(" - ")}`);
 console.log(`finDeSemana: ${finDeSemana.join(" - ")}`);
+console.log('------------------------------------------------------------------');
 
 // fill() => Rellena un array con un valor estático; podemos cambiar algunos elementos o todos; muta el array original
-/* const sitiosPopulares = ["Amazon", "Facebook", "Twitter", "Wikipedia"];
+const sitiosPopulares = ["Amazon", "Facebook", "Twitter", "Wikipedia"];
 sitiosPopulares.fill("Stackoverflow");
-console.log(`Sitios Populares: ${sitiosPopulares}`); */
-// sitiosPopulares.fill("Stackoverflow", 2, 4); // Cambiamos solo los últimos dos
-// console.log(`Sitios Populares: ${sitiosPopulares}`);
+console.log(`Sitios Populares: ${sitiosPopulares}`);
+sitiosPopulares.fill("Stackoverflow", 2, 4); // Cambiamos solo los últimos dos
+console.log(`Sitios Populares: ${sitiosPopulares}`);
+console.log('------------------------------------------------------------------');
 
 // includes() => Determina la existencia o inexistencia de un elemento.
-/* const autos = ["Ferrari", "Audi", "McLaren", "Lamborghini"];
+const autos = ["Ferrari", "Audi", "McLaren", "Lamborghini"];
 autos.includes("BMW")
   ? console.log("BMW figura en la serie")
-  : console.log("La segunda etapa incluirá a BMW"); */
+  : console.log("La segunda etapa incluirá a BMW");
+  console.log('------------------------------------------------------------------');
 
 // indexOf() => Permite conocer el indice de la primer ocurrencia de un elemento.
-/* const browsers = ["Mozilla Firefox", "Chrome", "Opera"];
+const browsers = ["Mozilla Firefox", "Chrome", "Opera"];
 console.log(`Browsers: ${browsers}`);
 console.log(
   `Chrome se encuentra en la posicion: ${browsers.indexOf("Chrome")} - ${
     browsers.indexOf("IE") >= 0 ? `IE persiste` : `IE ya no existe para React`
   }`
-); */
+);
+console.log('------------------------------------------------------------------');
 
 // lastIndexOf() => Retorna el indice de la última ocurrencia de un elemento.
-/* browsers.push("Mozilla Firefox");
+browsers.push("Mozilla Firefox");
 browsers.push("Safari");
 console.log(`Browsers: ${browsers}`);
 console.log(
   `primer posicion para Firefox: ${browsers.indexOf(
     "Mozilla Firefox"
   )} - última posicion para Firefox: ${browsers.lastIndexOf("Mozilla Firefox")}`
-); */
+);
+console.log('------------------------------------------------------------------');
 
 // reverse() => Invierte las posiciones de los elementos. Modifica el array original.
-/* const frutas = ["banana", "frutilla", "manzana"];
-console.log(`frutas al reves: ${frutas.reverse()}`); */
+const frutas = ["banana", "frutilla", "manzana"];
+console.log(`frutas al reves: ${frutas.reverse()}`);
+console.log('------------------------------------------------------------------');
 
 // ! sort() => Convierte los tipos de elementos en string y luego los ordena. Muta.
-/* const pruebas = ["desarrollo", "certificacion", "homologacion", "produccion"];
+const pruebas = ["desarrollo", "certificacion", "homologacion", "produccion"];
 console.log(`pruebas: ${pruebas.sort()}`);
 
 const numeros = [34, 99, 166, 21, 107, 84, 109, 55, 39, 60, 59];
@@ -66,11 +72,12 @@ const cmpAsc = (a, b) => {
 };
 console.log(`numeros ascendente: ${numeros.sort(cmpAsc)}`);
 
-console.log(`numeros descendente: ${numeros.sort((a, b) => b - a)}`); */
+console.log(`numeros descendente: ${numeros.sort((a, b) => b - a)}`);
+console.log('------------------------------------------------------------------');
 
 // splice() => Permite agregar, actualizar y REMOVER elementos. Cambia el array original.
 // for...of
-/* const cortes = ["cuadril", "asado", "vacio", "entraña"];
+const cortes = ["cuadril", "asado", "vacio", "entraña"];
 for (const corte of cortes) {
   console.log(`${corte}`);
 }
@@ -81,18 +88,19 @@ console.log(`cortes agregado: ${cortes}`);
 cortes.splice(2, 1, "marucha");
 console.log(`cortes reemplazado: ${cortes}`);
 
-cortes.splice(0, cortes.length); */
+cortes.splice(0, cortes.length);
 
 // cortes.length = 0;
 
 // cortes = [];
 
-// console.log(`cortes vacio: ${cortes}`);
+console.log(`cortes vacio: ${cortes}`);
+console.log('------------------------------------------------------------------');
 
 // Static Array Methods in JavaScript
 // Array.isArray(); Array.from();
 
-/* const nuevoArreglo = Array.of(true, [5, 6, 7], "Static Array Methods", {
+const nuevoArreglo = Array.of(true, [5, 6, 7], "Static Array Methods", {
   color: "azul",
 });
-console.log(`nuevoArreglo: `, nuevoArreglo); */
+console.log(`nuevoArreglo: `, nuevoArreglo);

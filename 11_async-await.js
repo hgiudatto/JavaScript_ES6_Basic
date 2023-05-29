@@ -15,8 +15,6 @@ const unaFuncion = async () => {
 };
 unaFuncion();
 
-// https://youtu.be/iHrVo5fvmzE?t=281
-// Javascript Nuggets - Async / Await => Coding Addict
 const usuarios = [
   { id: 1, nombre: "pedro" },
   { id: 2, nombre: "susana" },

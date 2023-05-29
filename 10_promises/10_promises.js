@@ -4,7 +4,10 @@
 // Objeto que retorna un valor el cual esperamos recibir en el futuro pero no ahora.
 // ticket - lapso de tiempo - pedido en mano => Pending, Rejected, Fulfilled
 // console
-/* const promise1 = new Promise((resolve, reject) => {});
+/* const promise = new Promise((resolve, reject) => {});
+console.log(promise); */
+
+/* const promise1 = new Promise((resolve, reject) => {resolve({statusConexion: 'CONECTADO'})});
 console.log(promise1); */
 
 let stocks = {

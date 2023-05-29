@@ -104,6 +104,25 @@
 
       addUser();
 
+      const ejecucionEnParalelo = () => {
+        let urls = [
+          "https://api.github.com/users/iliakan",
+          "https://api.github.com/users/hgiudatto/repos?per_page=100",
+          "https://rickandmortyapi.com/api/episode",
+        ];
+
+        // Mapeamos cada url a la promesa que retorna el fetch
+        let requests = urls.map((url) => fetch(url));
+
+        // Esperamos hasta que todos los trabajos esten cumplidos
+        Promise.all(requests).then((responses) =>
+          responses.forEach((response) =>
+            console.log(`${response.url}: ${response.status}`)
+          )
+        );
+      };
+      ejecucionEnParalelo();
+
       const showRickMortyChar = async (e) => {
         let characterName = document.getElementById("nickName").value;
         const rickMortyChar = await rickMortyCharacterByName(characterName);

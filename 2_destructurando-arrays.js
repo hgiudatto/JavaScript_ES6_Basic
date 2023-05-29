@@ -7,7 +7,7 @@ console.log(`player keys: ${Object.keys(player)}`);
 console.log(`player values: ${Object.values(player)}`);
 console.log(`player entries: ${Object.entries(player)}`);
 
-// ES POSICIONAL
+// ES POSICIONAL / String Template
 /* let bestPlayer = ["Lionel", "Messi"];
 
 let [nombre] = bestPlayer;
